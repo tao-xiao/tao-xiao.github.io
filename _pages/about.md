@@ -12,8 +12,8 @@ This is Tao Xiao, second-year Matser's course in Nara Institute of Science and T
 
 Education Background
 ======
-...
-
+* Master student in Master of Engineering from Nara Institute of Science and Technology, Japan.
+* BSc degree in Software Engineering from Chiang Mai University, Thailand, in  2020.
 
 For more info
 ------
