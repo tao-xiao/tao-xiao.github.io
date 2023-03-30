@@ -9,6 +9,7 @@ author_profile: true
 ## Research Awards & Activities
 
 * Research Assisstant, 2021-2023, Nara Institute of Science and Technology.
+* Junior Program Committee, International Working Conference on Mining Software Repositories (MSR): 2023@Research Track
 
 ## Scholarships
 
