@@ -8,10 +8,12 @@ author_profile: true
 
 ## Research Awards & Activities
 
-* Research Assisstant, 2021-2022, Nara Institute of Science and Technology.
+* Research Assisstant, 2021-2023, Nara Institute of Science and Technology.
 
 ## Scholarships
 
-* Jasso Honor’s Scholarship, 2020-2021.
+* [Jasso Honor’s Scholarship](https://www.jasso.go.jp/en/ryugaku/scholarship_j/shoreihi/about.html), Amount: 288,000 for 6 months (Oct 2020 - Mar 2021) 
+* [JSPS Research Fellowship for Young Scientist](https://www.jsps.go.jp/english/e-pd/index.html), Amount: 7,200,000 JPY for 3 years (Apr 2023 - Mar 2026)
+<!-- * [JSPS Research Fellowship for Young Scientist](https://www.jsps.go.jp/english/e-pd/index.html), Acceptance rate (2023): 158/738 (21.4%), Amount: 7,200,000 JPY for 3 years (Apr 2023 - Mar 2026) -->
 
 
