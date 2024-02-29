@@ -16,11 +16,10 @@ Education Background
 ======
 * Doctoral student at Nara Institute of Science and Technology, Japan.
 * Master of Engineering from Nara Institute of Science and Technology, Japan, in 2022.
-* BSc degree in Software Engineering from Chiang Mai University, Thailand, in  2020.
 
 For more info
 ------
 More info, please contact me
 ```
-tao.xiao.ts2@is.naist.jp
+tao[dot]xiao[dot]ts2[AT]is[dot]naist[dot]jp
 ```
