@@ -8,18 +8,18 @@ redirect_from:
   - /about.html
 ---
 
-Hello and welcome to my website! My name is Tao Xiao, and I am a doctoral student at the Nara Institute of Science and Technology, Japan. I belong to the [Software Engineering Lab](https://naist-se.github.io/).
+Hello and welcome to my website! I’m Tao Xiao, a postdoctoral researcher at Kyushu University, Japan. I’m part of the [POSL (Principles of Software engineering and programming Languages) lab](https://posl.ait.kyushu-u.ac.jp/en/).
 
-My research goal is to leverage empirical evidence and knowledge from software repositories to make software development more productive, effective, and efficient. Specifically, my research mainly focus on software quality (i.e., technical debt) and knowledge sharing (i.e., the usage of links in software developement).
+My research focuses on enhancing software development through both traditional methods and advanced technologies, including AI4SE.
 
 Education Background
 ======
-* Doctoral student at Nara Institute of Science and Technology, Japan.
-* Master of Engineering from Nara Institute of Science and Technology, Japan, in 2022.
+* Doctor of Engineering at Nara Institute of Science and Technology, Japan, in 2024.
+* Master of Engineering at Nara Institute of Science and Technology, Japan, in 2022.
 
 For more info
 ------
 More info, please contact me
 ```
-tao[dot]xiao[dot]ts2[AT]is[dot]naist[dot]jp
+xiao[AT]ait[DOT]kyushu-u[DOT]ac[DOT]jp
 ```
