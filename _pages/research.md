@@ -14,7 +14,7 @@ author_profile: true
 * Reviewer for Empirical Software Engineering (2024~2025), Transactions on Software Engineering and Methodology (2025), Science of Computer Programming (2025), Transactions on Software Engineering (2025)
 * Meta-reviewer for tool demonstrations track, Sub-reviewer for main track in Foundations of Software Engineering (FSE), 2025
 * Program Committee, Foundations of Software Engineering (FSE), 2026
-* Program Commitee, The IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER): [Registered Report Track](https://conf.researchr.org/track/saner-2025/saner-2025-registered-report-track-)
+* Program Committee, The IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER): [Registered Report Track](https://conf.researchr.org/track/saner-2025/saner-2025-registered-report-track-)
 * [MSR 2025 Tutorial](https://2025.msrconf.org/details/msr-2025-tutorials/2/Harmonized-Coding-with-AI-LLMs-for-Qualitative-Analysis-in-Software-Engineering-Rese), Harmonized Coding with AI: LLMs for Qualitative Analysis in Software Engineering Research
 
 
