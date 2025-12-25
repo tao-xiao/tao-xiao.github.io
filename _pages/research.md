@@ -18,9 +18,10 @@ author_profile: true
 * [MSR 2025 Tutorial](https://2025.msrconf.org/details/msr-2025-tutorials/2/Harmonized-Coding-with-AI-LLMs-for-Qualitative-Analysis-in-Software-Engineering-Rese), Harmonized Coding with AI: LLMs for Qualitative Analysis in Software Engineering Research
 
 
-## Scholarships
+## Research Grants & Scholarships
 * [JASSO Honors Scholarship](https://www.jasso.go.jp/en/ryugaku/scholarship_j/shoreihi/about.html), Amount: 288,000 JPY for 6 months (Oct 2020 - Mar 2021) 
 <!-- * [JSPS Research Fellowship for Young Scientist](https://www.jsps.go.jp/english/e-pd/index.html), Amount: 7,200,000 JPY for 3 years (Apr 2023 - Mar 2026) -->
 * [JSPS Research Fellowship for Young Scientist](https://www.jsps.go.jp/english/e-pd/index.html), Acceptance rate (2023): 158/738 (21.4%), Amount: 7,200,000 JPY for 3 years (Apr 2023 - Mar 2026)
+* [Kayamori Foundation of Informational Science Advancement Research Grant 2025](https://www.kayamorif.or.jp/j.html), Amount: 1,000,000 JPY for 2 years (Dec 2025 - Dec 2027)
 
 
