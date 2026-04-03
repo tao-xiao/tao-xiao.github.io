@@ -23,6 +23,6 @@ author_profile: true
 <!-- * [JSPS Research Fellowship for Young Scientist](https://www.jsps.go.jp/english/e-pd/index.html), Amount: 7,200,000 JPY for 3 years (Apr 2023 - Mar 2026) -->
 * [JSPS Research Fellowship for Young Scientist](https://www.jsps.go.jp/english/e-pd/index.html), Acceptance rate (2023): 158/738 (21.4%), Amount: 7,200,000 JPY for 3 years (Apr 2023 - Mar 2026)
 * [Kayamori Foundation of Informational Science Advancement Research Grant 2025](https://www.kayamorif.or.jp/j.html), Amount: 1,000,000 JPY for 2 years (Dec 2025 - Dec 2027)
-<!-- * [Grant-in-Aid for Early-Career Scientists](https://www.kayamorif.or.jp/j.html), Amount: 3,500,000 JPY for 2 years (Apr 2026 - Mar 2028) -->
+* [Grant-in-Aid for Early-Career Scientists](https://www.kayamorif.or.jp/j.html), Amount: 3,500,000 JPY for 2 years (Apr 2026 - Mar 2028)
 
 
