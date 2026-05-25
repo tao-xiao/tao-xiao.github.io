@@ -13,15 +13,17 @@ author_profile: true
 
 {% include base_path %}
 
-<div class="filters" style="margin-bottom: 20px; background: #ffffff; padding: 15px; border: 1px solid #eeeeee; border-radius: 4px;">
-  <strong>Filter by (multi-select):</strong>
-  <br>
-  <button id="btn-first" class="filter-btn-custom" onclick="toggleFilter('first')">First Author</button>
-  <button id="btn-corresponding" class="filter-btn-custom" onclick="toggleFilter('corresponding')">Corresponding Author</button>
-  <button id="btn-full" class="filter-btn-custom" onclick="toggleFilter('full')">Full Paper</button>
-  
-  <button class="filter-btn-action" onclick="resetFilters()">Reset (First/Corresponding & Full)</button>
-  <button class="filter-btn-action" onclick="showAll()">Show All</button>
+<div class="filters-container">
+  <strong style="display: block; margin-bottom: 10px;">Filter by (multi-select):</strong>
+  <div class="button-group">
+    <button id="btn-first" class="btn-modern" onclick="toggleFilter('first')">First Author</button>
+    <button id="btn-corresponding" class="btn-modern" onclick="toggleFilter('corresponding')">Corresponding Author</button>
+    <button id="btn-full" class="btn-modern" onclick="toggleFilter('full')">Full Paper</button>
+  </div>
+  <div class="button-group-actions" style="margin-top: 10px;">
+    <button class="btn-action-modern" onclick="resetFilters()">Reset (First/Corresponding & Full)</button>
+    <button class="btn-action-modern" onclick="showAll()">Show All</button>
+  </div>
 </div>
 
 <div id="publications-list">
@@ -35,44 +37,70 @@ author_profile: true
 {% endfor %}
 </div>
 
+<style>
+  /* Base Modern Button Styles */
+  .btn-modern, .btn-action-modern {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  /* Unselected: Pure White Background */
+  .btn-modern.unselected {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+    border-color: #dddddd !important;
+    box-shadow: none !important;
+  }
+
+  /* Selected: Pure Black Background */
+  .btn-modern.selected {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #000000 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+  }
+
+  /* Hover states */
+  .btn-modern:hover {
+    opacity: 0.85;
+  }
+
+  /* Reset/Show All: Light and Clean */
+  .btn-action-modern {
+    background-color: #f8f9fa !important;
+    color: #495057 !important;
+    border-color: #e9ecef !important;
+  }
+  .btn-action-modern:hover {
+    background-color: #e2e6ea !important;
+  }
+
+  .filters-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 6px;
+    border: 1px solid #f1f1f1;
+  }
+</style>
+
 <script>
 (function() {
   var activeFilters = { first: false, corresponding: false, full: false };
-
-  var style = document.createElement('style');
-  style.innerHTML = [
-    '.filter-btn-custom, .filter-btn-action {',
-    '  margin-right: 8px !important;',
-    '  margin-bottom: 8px !important;',
-    '  cursor: pointer !important;',
-    '  border-radius: 4px !important;',
-    '  padding: 8px 16px !important;',
-    '  font-size: 0.9em !important;',
-    '  transition: all 0.2s ease !important;',
-    '  display: inline-block !important;',
-    '  font-family: sans-serif !important;',
-    '  text-decoration: none !important;',
-    '  line-height: 1.5 !important;',
-    '}',
-    '.btn-unselected {',
-    '  background-color: #ffffff !important;',
-    '  color: #333333 !important;',
-    '  border: 1px solid #cccccc !important;',
-    '  box-shadow: none !important;',
-    '}',
-    '.btn-selected {',
-    '  background-color: #000000 !important;',
-    '  color: #ffffff !important;',
-    '  border: 1px solid #000000 !important;',
-    '  box-shadow: none !important;',
-    '}',
-    '.filter-btn-action {',
-    '  background-color: #ffffff !important;',
-    '  color: #333333 !important;',
-    '  border: 1px solid #cccccc !important;',
-    '}'
-  ].join('\\n');
-  document.head.appendChild(style);
 
   function updateVisibility() {
     var items = document.querySelectorAll('.publication-item');
@@ -103,14 +131,18 @@ author_profile: true
   }
 
   function updateButtonStyles() {
-    var keys = ['first', 'corresponding', 'full'];
-    for (var i = 0; i < keys.length; i++) {
-      var f = keys[i];
+    ['first', 'corresponding', 'full'].forEach(function(f) {
       var btn = document.getElementById('btn-' + f);
       if (btn) {
-        btn.className = 'filter-btn-custom ' + (activeFilters[f] ? 'btn-selected' : 'btn-unselected');
+        if (activeFilters[f]) {
+          btn.classList.add('selected');
+          btn.classList.remove('unselected');
+        } else {
+          btn.classList.add('unselected');
+          btn.classList.remove('selected');
+        }
       }
-    }
+    });
   }
 
   window.toggleFilter = function(f) {
@@ -132,14 +164,14 @@ author_profile: true
     updateVisibility();
   };
 
-  function ready(fn) {
-    if (document.readyState !== 'loading') { fn(); } 
-    else { document.addEventListener('DOMContentLoaded', fn); }
-  }
-
-  ready(function() {
+  if (document.readyState !== 'loading') {
     updateButtonStyles();
     updateVisibility();
-  });
+  } else {
+    document.addEventListener('DOMContentLoaded', function() {
+      updateButtonStyles();
+      updateVisibility();
+    });
+  }
 })();
 </script>
