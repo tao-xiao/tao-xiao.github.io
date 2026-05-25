@@ -13,23 +13,15 @@ author_profile: true
 
 {% include base_path %}
 
-{% comment %}
-  Filter buttons logic
-{% endcomment %}
-<div class="filters">
+<div class="filters" style="margin-bottom: 20px; background: #ffffff; padding: 15px; border: 1px solid #eeeeee; border-radius: 4px;">
   <strong>Filter by (multi-select):</strong>
   <br>
-  <button class="btn filter-btn btn--unselected" data-filter="first">First Author</button>
-  <button class="btn filter-btn btn--unselected" data-filter="corresponding">Corresponding Author</button>
-  <button class="btn filter-btn btn--unselected" data-filter="full">Full Paper</button>
+  <button id="btn-first" class="filter-btn-custom" onclick="toggleFilter('first')">First Author</button>
+  <button id="btn-corresponding" class="filter-btn-custom" onclick="toggleFilter('corresponding')">Corresponding Author</button>
+  <button id="btn-full" class="filter-btn-custom" onclick="toggleFilter('full')">Full Paper</button>
   
-  <button class="btn filter-btn-action" onclick="resetFilters()">
-    Reset (First/Corresponding & Full)
-  </button>
-  
-  <button class="btn filter-btn-action" onclick="showAll()">
-    Show All
-  </button>
+  <button class="filter-btn-action" onclick="resetFilters()">Reset (First/Corresponding & Full)</button>
+  <button class="filter-btn-action" onclick="showAll()">Show All</button>
 </div>
 
 <div id="publications-list">
@@ -44,138 +36,110 @@ author_profile: true
 </div>
 
 <script>
-// We use a self-executing function to avoid global namespace pollution
 (function() {
-  let activeFilters = {
-    first: false,
-    corresponding: false,
-    full: false
-  };
+  var activeFilters = { first: false, corresponding: false, full: false };
+
+  var style = document.createElement('style');
+  style.innerHTML = [
+    '.filter-btn-custom, .filter-btn-action {',
+    '  margin-right: 8px !important;',
+    '  margin-bottom: 8px !important;',
+    '  cursor: pointer !important;',
+    '  border-radius: 4px !important;',
+    '  padding: 8px 16px !important;',
+    '  font-size: 0.9em !important;',
+    '  transition: all 0.2s ease !important;',
+    '  display: inline-block !important;',
+    '  font-family: sans-serif !important;',
+    '  text-decoration: none !important;',
+    '  line-height: 1.5 !important;',
+    '}',
+    '.btn-unselected {',
+    '  background-color: #ffffff !important;',
+    '  color: #333333 !important;',
+    '  border: 1px solid #cccccc !important;',
+    '  box-shadow: none !important;',
+    '}',
+    '.btn-selected {',
+    '  background-color: #000000 !important;',
+    '  color: #ffffff !important;',
+    '  border: 1px solid #000000 !important;',
+    '  box-shadow: none !important;',
+    '}',
+    '.filter-btn-action {',
+    '  background-color: #ffffff !important;',
+    '  color: #333333 !important;',
+    '  border: 1px solid #cccccc !important;',
+    '}'
+  ].join('\\n');
+  document.head.appendChild(style);
 
   function updateVisibility() {
-    const items = document.querySelectorAll('.publication-item');
-    const hasActiveFilters = Object.values(activeFilters).some(v => v);
+    var items = document.querySelectorAll('.publication-item');
+    var hasActiveFilters = false;
+    for (var key in activeFilters) { if (activeFilters[key]) hasActiveFilters = true; }
     
-    items.forEach(item => {
-      const isFirst = item.getAttribute('data-first') === 'true';
-      const isCorresponding = item.getAttribute('data-corresponding') === 'true';
-      const isFull = item.getAttribute('data-full') === 'true';
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      var isFirst = item.getAttribute('data-first') === 'true';
+      var isCorresponding = item.getAttribute('data-corresponding') === 'true';
+      var isFull = item.getAttribute('data-full') === 'true';
 
       if (!hasActiveFilters) {
-        // Default behavior: (First OR Corresponding) AND Full Paper
-        const shouldShow = ((isFirst || isCorresponding) && isFull);
+        var shouldShow = ((isFirst || isCorresponding) && isFull);
         item.style.display = shouldShow ? 'block' : 'none';
-        return;
+      } else {
+        var roleMatch = true;
+        if (activeFilters.first || activeFilters.corresponding) {
+          roleMatch = false;
+          if (activeFilters.first && isFirst) roleMatch = true;
+          if (activeFilters.corresponding && isCorresponding) roleMatch = true;
+        }
+        var typeMatch = true;
+        if (activeFilters.full && !isFull) typeMatch = false;
+        item.style.display = (roleMatch && typeMatch) ? 'block' : 'none';
       }
-
-      // Role Match Logic: (First OR Corresponding)
-      let roleMatch = true;
-      if (activeFilters.first || activeFilters.corresponding) {
-        roleMatch = false;
-        if (activeFilters.first && isFirst) roleMatch = true;
-        if (activeFilters.corresponding && isCorresponding) roleMatch = true;
-      }
-
-      // Type Match Logic: AND Full Paper
-      let typeMatch = true;
-      if (activeFilters.full && !isFull) {
-        typeMatch = false;
-      }
-
-      item.style.display = (roleMatch && typeMatch) ? 'block' : 'none';
-    });
+    }
   }
 
-  // Global functions attached to window for HTML onclick attributes
+  function updateButtonStyles() {
+    var keys = ['first', 'corresponding', 'full'];
+    for (var i = 0; i < keys.length; i++) {
+      var f = keys[i];
+      var btn = document.getElementById('btn-' + f);
+      if (btn) {
+        btn.className = 'filter-btn-custom ' + (activeFilters[f] ? 'btn-selected' : 'btn-unselected');
+      }
+    }
+  }
+
+  window.toggleFilter = function(f) {
+    activeFilters[f] = !activeFilters[f];
+    updateButtonStyles();
+    updateVisibility();
+  };
+
   window.showAll = function() {
-    activeFilters = { first: false, corresponding: false, full: false };
-    document.querySelectorAll('.filter-btn').forEach(b => {
-      b.classList.remove('btn--selected');
-      b.classList.add('btn--unselected');
-    });
-    document.querySelectorAll('.publication-item').forEach(item => item.style.display = 'block');
+    for (var key in activeFilters) { activeFilters[key] = false; }
+    updateButtonStyles();
+    var items = document.querySelectorAll('.publication-item');
+    for (var i = 0; i < items.length; i++) { items[i].style.display = 'block'; }
   };
 
   window.resetFilters = function() {
-    activeFilters = { first: false, corresponding: false, full: false };
-    document.querySelectorAll('.filter-btn').forEach(b => {
-      b.classList.remove('btn--selected');
-      b.classList.add('btn--unselected');
-    });
+    for (var key in activeFilters) { activeFilters[key] = false; }
+    updateButtonStyles();
     updateVisibility();
   };
 
-  function init() {
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.getAttribute('data-filter');
-        activeFilters[filter] = !activeFilters[filter];
-        
-        if (activeFilters[filter]) {
-          btn.classList.add('btn--selected');
-          btn.classList.remove('btn--unselected');
-        } else {
-          btn.classList.remove('btn--selected');
-          btn.classList.add('btn--unselected');
-        }
-        updateVisibility();
-      });
-    });
+  function ready(fn) {
+    if (document.readyState !== 'loading') { fn(); } 
+    else { document.addEventListener('DOMContentLoaded', fn); }
+  }
 
-    // Apply initial default view
+  ready(function() {
+    updateButtonStyles();
     updateVisibility();
-  }
-
-  // Execute immediately if DOM ready, otherwise wait
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+  });
 })();
 </script>
-
-<style>
-/* Increase specificity with body prefix to override theme defaults */
-body .filters {
-  margin-bottom: 20px;
-  background: #ffffff !important;
-  padding: 15px;
-  border: 1px solid #eeeeee;
-  border-radius: 4px;
-}
-body .filter-btn, body .filter-btn-action {
-  margin-right: 8px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  border-radius: 4px;
-  padding: 8px 16px;
-  font-size: 0.9em;
-  transition: all 0.2s ease;
-  outline: none;
-  display: inline-block;
-}
-/* White style for unselected - strictly enforced */
-body .btn--unselected {
-  background-color: #ffffff !important;
-  color: #333333 !important;
-  border: 1px solid #cccccc !important;
-  box-shadow: none !important;
-}
-/* Black style for selected - strictly enforced */
-body .btn--selected {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  border: 1px solid #000000 !important;
-  box-shadow: none !important;
-}
-/* Action buttons (Reset/Show All) - strictly white background */
-body .filter-btn-action {
-  background-color: #ffffff !important;
-  color: #333333 !important;
-  border: 1px solid #cccccc !important;
-}
-body .filter-btn-action:hover {
-  background-color: #f0f0f0 !important;
-}
-</style>
