@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
+# Compatibility patch for Ruby 4.0+
+require_relative "_plugins/ruby_compatibility_patch"
+
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -10,6 +13,13 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 gem "github-pages", group: :jekyll_plugins
+
+# Required for Ruby 3.4+ / 4.0+ compatibility
+gem "csv"
+gem "webrick"
+gem "base64"
+gem "bigdecimal"
+gem "mutex_m"
 
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.

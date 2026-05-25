@@ -5,23 +5,161 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+{% include base_path %}
+
+{% if site.author.googlescholar %}
+  <p>You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</p>
 {% endif %}
-* Understanding Shared Links and Their Intentions to Meet Information Needs in Modern Code Review: A Case Study of the OpenStack and Qt Projects. Dong Wang, **Tao Xiao**, Patanamon Thongtanunam, Raula Gaikovina Kula, Kenichi Matsumoto. <span style="text-decoration:underline;font-style: italic">Empirical Software Engineering (ESE)</span>, 2021. [pdf](https://link.springer.com/article/10.1007/s10664-021-09997-x) <span style="color:red">[Selected for the journal first program of the ICSE 2022]</span>
-* More Than React: Investigating The Role of Emoji Reaction in GitHub Pull Requests. Teyon Son, **Tao Xiao**, Dong Wang, Raula Gaikovina Kula, Takashi Ishio, Kenichi Matsumoto. <span style="text-decoration:underline;font-style: italic">37th International Conference on Software Maintenance and Evolution (ICSME)</span>, Registered Report, 2021. [pdf](https://www.researchgate.net/publication/353995896_More_Than_React_Investigating_The_Role_of_EmojiReaction_in_GitHub_Pull_Requests)
-* Characterizing and Mitigating Self-Admitted Technical Debt in Build Systems. **Tao Xiao**, Dong Wang, Shane Mcintosh, Hideaki Hata, Raula Gaikovina Kula, Takashi Ishio, Kenichi Matsumoto. <span style="text-decoration:underline;font-style: italic">IEEE Transactions on Software Engineering (TSE)</span>, 2021. [pdf](http://tao-xiao.github.io/files/SATD_TSE_2021.pdf) <span style="color:red">[Selected for the journal first program of the FSE 2022]</span>
-* GitHub Sponsors: Exploring a New Way to Contribute to Open Source. Shimada Naomichi, **Tao Xiao**, Hideaki Hata, Christoph Treude, and Kenichi Matsumoto. <span style="text-decoration:underline;font-style: italic">44th International Conference on Software Engineering (ICSE)</span>, 2022. [pdf](https://arxiv.org/pdf/2202.05751.pdf)
-* Understanding the Role of Images on Stack Overflow. Dong Wang, **Tao Xiao**, Christoph Treude, Raula Gaikovina Kula, Hideaki Hata, Yasutaka Kamei. <span style="text-decoration:underline;font-style: italic">20th IEEE International Conference on Mining Software Repositories (MSR)</span>, 2023. [pdf](https://arxiv.org/pdf/2303.15684.pdf)
-* 18 million links in commit messages: purpose, evolution, and decay. **Tao Xiao**, Sebastian Baltes, Hideaki Hata, Christoph Treude, Raula Gaikovina Kula, Takashi Ishio, Kenichi Matsumoto. <span style="text-decoration:underline;font-style: italic">Empirical Software Engineering (ESE)</span>, 2023. [pdf](http://tao-xiao.github.io/files/Links_ESE_2023.pdf) 
-* More than React: Investigating the Role of Emoji Reaction in GitHub Pull Requests. Dong Wang, **Tao Xiao**, Teyon Son, Raula Gaikovina Kula, Takashi Ishio, Yasutaka Kamei, Kenichi Matsumoto. <span style="text-decoration:underline;font-style: italic">Empirical Software Engineering (ESE)</span>, 2023. [pdf](https://arxiv.org/pdf/2307.07111.pdf)
-* DevGPT: Studying Developer-ChatGPT Conversations. **Tao Xiao**, Christoph Treude, Hideaki Hata, Kenichi Matsumoto. <span style="text-decoration:underline;font-style: italic">21st IEEE International Conference on Mining Software Repositories (MSR)</span>, Mining Challenge Proposal, 2024. [pdf](https://arxiv.org/pdf/2309.03914.pdf)
-* How Trustworthy Is Your Continuous Integration (CI) Accelerator?: A Comparison of the Trustworthiness of CI Acceleration Products. Zhili Zeng, **Tao Xiao**, Maxime Lamothe, Hideaki Hata, Shane McIntosh. <span style="text-decoration:underline;font-style: italic">IEEE Software</span>, 2024. [pdf](https://rebels.cs.uwaterloo.ca/papers/ieeesw2024_zeng.pdf)
-* A Mutation-Guided Assessment of Acceleration Approaches for Continuous Integration: An Empirical Study of Yourbase. Zhili Zeng, **Tao Xiao**, Maxime Lamothe, Hideaki Hata, Shane McIntosh. <span style="text-decoration:underline;font-style: italic">21st IEEE International Conference on Mining Software Repositories (MSR)</span>, 2024. [pdf](https://rebels.cs.uwaterloo.ca/papers/msr2024_zeng.pdf)
-* "My GitHub Sponsors profile is live!" Investigating the Impact of Twitter/X Mentions on GitHub Sponsors. Youmei Fan, **Tao Xiao**, Christoph Treude, Hideaki Hata, Kenichi Matsumoto. <span style="text-decoration:underline;font-style: italic">46th International Conference on Software Engineering (ICSE)</span>, 2024. [pdf](https://arxiv.org/pdf/2401.02755.pdf)
-* Quantifying and Characterizing Clones of Self-Admitted Technical Debt in Build Systems. **Tao Xiao**, Zhili Zeng, Dong Wang, Hideaki Hata, Shane McIntosh, Kenichi Matsumoto. <span style="text-decoration:underline;font-style: italic">Empirical Software Engineering (ESE)</span>, 2024. [pdf](https://arxiv.org/pdf/2402.08920.pdf)
-* Generative AI for Pull Request Descriptions: Adoption, Impact, and Developer Interventions. **Tao Xiao**, Hideaki Hata, Christoph Treude, Kenichi Matsumoto. <span style="text-decoration:underline;font-style: italic">The ACM International Conference on the Foundations of Software Engineering (FSE)</span>, 2024. [pdf](http://tao-xiao.github.io/files/Copilot4PR_FSE_2024.pdf)
-* How Far Have LLMs Come Toward Automated SATD Taxonomy Construction?. Sota Nakashima, Yuta Ishimoto, Masanari Kondo, **Tao Xiao**, Yasutaka Kamei. <span style="text-decoration:underline;font-style: italic">32nd Asia-Pacific Software Engineering Conference</span>, Early Research Achievements (ERA) track, 2025. [pdf](https://arxiv.org/pdf/2506.09601)
-* AILINKPREVIEWER: Enhancing Code Reviews with LLM-Powered Link Previews. Panya Trakoolgerntong, **Tao Xiao**, Masanari Kondo, Chaiyong Ragkhitwetsagul, Morakot Choetkiertikul, Pattaraporn Sangaroonsilp, Yasutaka Kamei. <span style="text-decoration:underline;font-style: italic">32nd Asia-Pacific Software Engineering Conference</span>, Tool Demonstration, 2025. [pdf](https://arxiv.org/pdf/2511.09223)
-* Self-Admitted GenAI Usage in Open-Source Software. **Tao Xiao**, Youmei Fan, Fabio Calefato, Christoph Treude, Raula Gaikovina Kula, Hideaki Hata, Sebastian Baltes. <span style="text-decoration:underline;font-style: italic">IEEE Transactions on Software Engineering (TSE)</span>, 2026. [pdf](https://arxiv.org/pdf/2507.10422)
-* Cross-Project Flakiness: A Case Study of the OpenStack Ecosystem. **Tao Xiao**, Dong Wang, Shane McIntosh, Hideaki Hata, Yasutaka Kamei. <span style="text-decoration:underline;font-style: italic">IEEE Transactions on Software Engineering (TSE)</span>, 2026. [pdf](https://arxiv.org/pdf/2602.09311)
+
+{% include base_path %}
+
+{% comment %}
+  Filter buttons logic
+{% endcomment %}
+<div class="filters">
+  <strong>Filter by (multi-select):</strong>
+  <br>
+  <button class="btn filter-btn" data-filter="first">First Author</button>
+  <button class="btn filter-btn" data-filter="corresponding">Corresponding Author</button>
+  <button class="btn filter-btn" data-filter="full">Full Paper</button>
+  
+  <button class="btn filter-btn-action" onclick="resetFilters()">
+    Reset (First/Corresponding & Full)
+  </button>
+  
+  <button class="btn filter-btn-action" onclick="showAll()">
+    Show All
+  </button>
+</div>
+
+<div id="publications-list">
+{% for post in site.publications reversed %}
+  <div class="publication-item" 
+       data-first="{{ post.is_first_author | default: false }}" 
+       data-corresponding="{{ post.is_corresponding_author | default: false }}"
+       data-full="{{ post.is_full_paper | default: false }}">
+    {% include archive-single.html %}
+  </div>
+{% endfor %}
+</div>
+
+<script>
+let activeFilters = {
+  first: false,
+  corresponding: false,
+  full: false
+};
+
+function updateVisibility() {
+  const items = document.querySelectorAll('.publication-item');
+  const hasActiveFilters = Object.values(activeFilters).some(v => v);
+  
+  items.forEach(item => {
+    const isFirst = item.getAttribute('data-first') === 'true';
+    const isCorresponding = item.getAttribute('data-corresponding') === 'true';
+    const isFull = item.getAttribute('data-full') === 'true';
+
+    if (!hasActiveFilters) {
+      // Default: (First OR Corresponding) AND Full Paper
+      item.style.display = ((isFirst || isCorresponding) && isFull) ? 'block' : 'none';
+      return;
+    }
+
+    // Role Match Logic: (First OR Corresponding)
+    let roleMatch = true;
+    if (activeFilters.first || activeFilters.corresponding) {
+      roleMatch = false;
+      if (activeFilters.first && isFirst) roleMatch = true;
+      if (activeFilters.corresponding && isCorresponding) roleMatch = true;
+    }
+
+    // Type Match Logic: AND Full Paper
+    let typeMatch = true;
+    if (activeFilters.full && !isFull) {
+      typeMatch = false;
+    }
+
+    item.style.display = (roleMatch && typeMatch) ? 'block' : 'none';
+  });
+}
+
+function showAll() {
+  activeFilters = { first: false, corresponding: false, full: false };
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.remove('btn--selected');
+    b.classList.add('btn--unselected');
+  });
+  document.querySelectorAll('.publication-item').forEach(item => item.style.display = 'block');
+}
+
+function resetFilters() {
+  activeFilters = { first: false, corresponding: false, full: false };
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.remove('btn--selected');
+    b.classList.add('btn--unselected');
+  });
+  updateVisibility();
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.classList.add('btn--unselected');
+  btn.addEventListener('click', () => {
+    const filter = btn.getAttribute('data-filter');
+    activeFilters[filter] = !activeFilters[filter];
+    
+    if (activeFilters[filter]) {
+      btn.classList.add('btn--selected');
+      btn.classList.remove('btn--unselected');
+    } else {
+      btn.classList.remove('btn--selected');
+      btn.classList.add('btn--unselected');
+    }
+    updateVisibility();
+  });
+});
+
+window.addEventListener('DOMContentLoaded', updateVisibility);
+</script>
+
+<style>
+.filters {
+  margin-bottom: 20px;
+  background: #ffffff;
+  padding: 15px;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+}
+.filter-btn, .filter-btn-action {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+  outline: none;
+}
+/* White style for unselected */
+.btn--unselected {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+  border: 1px solid #cccccc !important;
+  box-shadow: none !important;
+}
+/* Black style for selected */
+.btn--selected {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+  box-shadow: none !important;
+}
+/* Action buttons (Reset/Show All) - strictly white background */
+.filter-btn-action {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+  border: 1px solid #cccccc !important;
+}
+.filter-btn-action:hover {
+  background-color: #f0f0f0 !important;
+}
+</style>

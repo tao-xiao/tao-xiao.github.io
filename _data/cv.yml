@@ -1,0 +1,53 @@
+education:
+  en:
+    - degree: "Doctor of Engineering"
+      institution: "Nara Institute of Science and Technology, Japan"
+      year: "2024"
+    - degree: "Master of Engineering"
+      institution: "Nara Institute of Science and Technology, Japan"
+      year: "2022"
+  zh:
+    - degree: "工学博士"
+      institution: "奈良先端科学技术大学院大学, 日本"
+      year: "2024"
+    - degree: "工学硕士"
+      institution: "奈良先端科学技术大学院大学, 日本"
+      year: "2022"
+
+experience:
+  en:
+    - role: "Assistant Professor"
+      institution: "Kyushu University, Japan"
+      period: "2024 - Present"
+      details: "Part of the POSL (Principles of Software engineering and programming Languages) Lab."
+    - role: "Research Assistant"
+      institution: "Nara Institute of Science and Technology, Japan"
+      period: "2020 - 2024"
+  zh:
+    - role: "助理教授"
+      institution: "九州大学, 日本"
+      period: "2024 - 至今"
+      details: "隶属于 POSL (软件工程与编程语言原理) 实验室。"
+    - role: "研究助理"
+      institution: "奈良先端科学技术大学院大学, 日本"
+      period: "2020 - 2024"
+
+interests:
+  en:
+    - title: "AI for Software Engineering (AI4SE)"
+      desc: "The application of artificial intelligence techniques, particularly Large Language Models, to automate and enhance software engineering tasks."
+    - title: "Mining Software Repositories (MSR)"
+      desc: "Extracting and analyzing data from software repositories to discover patterns, trends, and insights into software development processes."
+    - title: "Continuous Integration & Deployment (CI/CD)"
+      desc: "The practice of automating the integration and deployment of code changes to optimize build systems and software delivery."
+    - title: "Code Review"
+      desc: "The process of systematic examination of computer source code to find bugs, improve code quality, and share knowledge among developers."
+  zh:
+    - title: "人工智能赋能软件工程 (AI4SE)"
+      desc: "应用人工智能技术，特别是大语言模型，来自动化和增强软件工程任务。"
+    - title: "软件仓库挖掘 (MSR)"
+      desc: "从软件仓库中提取和分析数据，以发现软件开发过程中的模式、趋势和洞察。"
+    - title: "持续集成与交付 (CI/CD)"
+      desc: "自动化代码变更的集成和部署实践，以优化构建系统和软件交付。"
+    - title: "代码审查 (Code Review)"
+      desc: "系统性检查计算机源代码的过程，旨在发现漏洞、提高代码质量并促进开发者间的知识共享。"
