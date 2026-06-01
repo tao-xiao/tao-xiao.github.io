@@ -22,7 +22,13 @@ This skill helps you manage and update your academic website efficiently.
 - **Markdown Rendering**: Always leave blank lines around HTML blocks (e.g., `<div>`) to prevent Markdown layout collapse.
 - **UI/UX Consistency**: 
     - Verify high-contrast button colors (Selected: Black, Unselected: White).
-    - Check author styling (Bold for first, Underline for corresponding).
+    - **Author Styling (Tao Xiao Only)**:
+        - Highlight: Light red background (`#ffcccc`) via `<span>`.
+        - First Author: Bold (`<strong>`).
+        - Corresponding Author: Underline (`<u>`).
+        - Rule: These styles apply ONLY to "Tao Xiao". Other authors are plain text.
+    - **Paper Tracks**: For non-full papers (`is_full_paper: false`), display the `track` (default: "Short Paper") in parentheses after the venue.
+    - **PDF Placeholders**: If `paperurl` is missing, display `[pdf (placeholder)]` linked to `#`.
     - Ensure no extra spaces before commas in author lists.
     - Check navigation menu alignment (menu items should stay on one line).
 - **Routing**: Ensure Home page (`/`) and all permalinks do not return 404.

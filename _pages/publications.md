@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 {% if site.author.googlescholar %}
-  <p>You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</p>
+  <p>You can also find my under-reviewed articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</p>
 {% endif %}
 
 {% include base_path %}

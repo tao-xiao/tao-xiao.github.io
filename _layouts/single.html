@@ -34,13 +34,19 @@ layout: default
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.year | default: "2026" }} </p>
         {% elsif page.collection == 'publications' %}
-          <p style="margin: 0;">Published in <i>{{ page.venue }}</i>, {{ page.year | default: "2026" }} </p>
+          <p style="margin: 0;">Published in <i>{{ page.venue }}</i>, {{ page.year | default: "2026" }} 
+          {% unless page.is_full_paper %}
+            ({{ page.track | default: "Short Paper" }})
+          {% endunless %}
+          </p>
           <p style="margin: 0;">
           {% if page.authors %}
-            {% for author in page.authors %}{% assign author_name = author.name | default: author %}{% assign is_me = false %}{% if author_name contains "Tao Xiao" %}{% assign is_me = true %}{% endif %}{% capture display_name %}{% if is_me %}{% if page.is_first_author and page.is_corresponding_author %}<u><strong>{{ author_name }}</strong></u>{% elsif page.is_first_author %}<strong>{{ author_name }}</strong>{% elsif page.is_corresponding_author %}<u>{{ author_name }}</u>{% else %}{{ author_name }}{% endif %}{% else %}{{ author_name }}{% endif %}{% endcapture %}{{ display_name | strip }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+            {% for author in page.authors %}{% assign author_name = author.name | default: author %}{% assign is_me = false %}{% if author_name contains "Tao Xiao" %}{% assign is_me = true %}{% endif %}{% capture display_name %}{% if is_me %}<span style="background-color: #ffcccc;">{% if page.is_first_author and page.is_corresponding_author %}<u><strong>{{ author_name }}</strong></u>{% elsif page.is_first_author %}<strong>{{ author_name }}</strong>{% elsif page.is_corresponding_author %}<u>{{ author_name }}</u>{% else %}{{ author_name }}{% endif %}</span>{% else %}{{ author_name }}{% endif %}{% endcapture %}{{ display_name | strip }}{% unless forloop.last %}, {% endunless %}{% endfor %}
           {% endif %}
           {% if page.paperurl %}
             <a href="{{ page.paperurl }}">[pdf]</a>
+          {% else %}
+            <a href="#">[pdf (placeholder)]</a>
           {% endif %}
           </p>
         {% elsif page.year %}

@@ -25,14 +25,19 @@
     
     <p style="margin: 0; font-size: 0.9em;">
       Published in <i>{{ post.venue }}</i>, {{ post.year | default: "2026" }}
+      {% unless post.is_full_paper %}
+        ({{ post.track | default: "Short Paper" }})
+      {% endunless %}
     </p>
 
     <p style="margin: 0; font-size: 0.9em;">
       {% if post.authors %}
-        {% for author in post.authors %}{% assign author_name = author.name | default: author %}{% assign is_me = false %}{% if author_name contains "Tao Xiao" %}{% assign is_me = true %}{% endif %}{% capture display_name %}{% if is_me %}{% if post.is_first_author and post.is_corresponding_author %}<u><strong>{{ author_name }}</strong></u>{% elsif post.is_first_author %}<strong>{{ author_name }}</strong>{% elsif post.is_corresponding_author %}<u>{{ author_name }}</u>{% else %}{{ author_name }}{% endif %}{% else %}{{ author_name }}{% endif %}{% endcapture %}{{ display_name | strip }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+        {% for author in post.authors %}{% assign author_name = author.name | default: author %}{% assign is_me = false %}{% if author_name contains "Tao Xiao" %}{% assign is_me = true %}{% endif %}{% capture display_name %}{% if is_me %}<span style="background-color: #ffcccc;">{% if post.is_first_author and post.is_corresponding_author %}<u><strong>{{ author_name }}</strong></u>{% elsif post.is_first_author %}<strong>{{ author_name }}</strong>{% elsif post.is_corresponding_author %}<u>{{ author_name }}</u>{% else %}{{ author_name }}{% endif %}</span>{% else %}{{ author_name }}{% endif %}{% endcapture %}{{ display_name | strip }}{% unless forloop.last %}, {% endunless %}{% endfor %}
       {% endif %}
       {% if post.paperurl %}
         <a href="{{ post.paperurl }}">[pdf]</a>
+      {% else %}
+        <a href="#">[pdf (placeholder)]</a>
       {% endif %}
     </p>
     </li>
