@@ -3,6 +3,7 @@ title: "Exploring the Potential of Program Flowcharts on Code Generation Using M
 collection: publications
 permalink: /publication/2026-06-01-exploring-potential-flowcharts
 venue: "The 26th International Conference on Software Quality, Reliability, and Security (QRS)"
+paperurl: "https://arxiv.org/pdf/2607.09146"
 year: 2026
 is_full_paper: true
 is_first_author: false

@@ -4,6 +4,7 @@ collection: publications
 permalink: /publication/2026-06-02-thinklog-leveraging-reasoning
 venue: "The 26th International Conference on Software Quality, Reliability, and Security (QRS)"
 track: "Short Paper"
+paperurl: "https://arxiv.org/pdf/2607.11615"
 year: 2026
 is_full_paper: false
 is_first_author: false
