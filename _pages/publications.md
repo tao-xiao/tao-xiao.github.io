@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 {% if site.author.googlescholar %}
-  <p>You can also find my under-reviewed articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</p>
+  <p>You can also find an up-to-date publication list on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</p>
 {% endif %}
 
 {% include base_path %}
@@ -16,14 +16,15 @@ author_profile: true
 <div class="filters-container">
   <strong style="display: block; margin-bottom: 10px;">Filter by (multi-select):</strong>
   <div class="button-group">
-    <button id="btn-first" class="btn-modern" onclick="toggleFilter('first')">First Author</button>
-    <button id="btn-corresponding" class="btn-modern" onclick="toggleFilter('corresponding')">Corresponding Author</button>
-    <button id="btn-full" class="btn-modern" onclick="toggleFilter('full')">Full Paper</button>
+    <button id="btn-first" class="btn-modern selected" onclick="toggleFilter('first')">First Author</button>
+    <button id="btn-corresponding" class="btn-modern selected" onclick="toggleFilter('corresponding')">Corresponding Author</button>
+    <button id="btn-full" class="btn-modern selected" onclick="toggleFilter('full')">Full Paper</button>
   </div>
   <div class="button-group-actions" style="margin-top: 10px;">
     <button class="btn-action-modern" onclick="resetFilters()">Reset (First/Corresponding & Full)</button>
     <button class="btn-action-modern" onclick="showAll()">Show All</button>
   </div>
+  <p id="publication-count" aria-live="polite" style="margin: 10px 0 0;"></p>
 </div>
 
 <div id="publications-list">
@@ -100,11 +101,12 @@ author_profile: true
 
 <script>
 (function() {
-  var activeFilters = { first: false, corresponding: false, full: false };
+  var activeFilters = { first: true, corresponding: true, full: true };
 
   function updateVisibility() {
     var items = document.querySelectorAll('.publication-item');
     var hasActiveFilters = false;
+    var visibleCount = 0;
     for (var key in activeFilters) { if (activeFilters[key]) hasActiveFilters = true; }
     
     for (var i = 0; i < items.length; i++) {
@@ -114,8 +116,8 @@ author_profile: true
       var isFull = item.getAttribute('data-full') === 'true';
 
       if (!hasActiveFilters) {
-        var shouldShow = ((isFirst || isCorresponding) && isFull);
-        item.style.display = shouldShow ? 'block' : 'none';
+        item.style.display = 'block';
+        visibleCount++;
       } else {
         var roleMatch = true;
         if (activeFilters.first || activeFilters.corresponding) {
@@ -125,9 +127,14 @@ author_profile: true
         }
         var typeMatch = true;
         if (activeFilters.full && !isFull) typeMatch = false;
-        item.style.display = (roleMatch && typeMatch) ? 'block' : 'none';
+        var shouldShow = roleMatch && typeMatch;
+        item.style.display = shouldShow ? 'block' : 'none';
+        if (shouldShow) visibleCount++;
       }
     }
+
+    var count = document.getElementById('publication-count');
+    if (count) count.textContent = 'Showing ' + visibleCount + ' of ' + items.length + ' publications';
   }
 
   function updateButtonStyles() {
@@ -154,12 +161,13 @@ author_profile: true
   window.showAll = function() {
     for (var key in activeFilters) { activeFilters[key] = false; }
     updateButtonStyles();
-    var items = document.querySelectorAll('.publication-item');
-    for (var i = 0; i < items.length; i++) { items[i].style.display = 'block'; }
+    updateVisibility();
   };
 
   window.resetFilters = function() {
-    for (var key in activeFilters) { activeFilters[key] = false; }
+    activeFilters.first = true;
+    activeFilters.corresponding = true;
+    activeFilters.full = true;
     updateButtonStyles();
     updateVisibility();
   };

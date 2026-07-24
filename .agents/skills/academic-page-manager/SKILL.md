@@ -22,6 +22,8 @@ This skill helps you manage and update your academic website efficiently.
 - **Markdown Rendering**: Always leave blank lines around HTML blocks (e.g., `<div>`) to prevent Markdown layout collapse.
 - **UI/UX Consistency**: 
     - Verify high-contrast button colors (Selected: Black, Unselected: White).
+    - Ensure publication filter button classes, JavaScript filter state, visible results, and the "Showing X of Y publications" counter agree on initial load and after Reset/Show All.
+    - Homepage selected publications must be controlled by `selected: true` in publication front matter; verify that only the intended papers appear.
     - **Author Styling (Tao Xiao Only)**:
         - Highlight: Light red background (`#ffcccc`) via `<span>`.
         - First Author: Bold (`<strong>`).
@@ -32,6 +34,7 @@ This skill helps you manage and update your academic website efficiently.
     - Ensure no extra spaces before commas in author lists.
     - Check navigation menu alignment (menu items should stay on one line).
 - **Routing**: Ensure Home page (`/`) and all permalinks do not return 404.
+- **SEO & Template Hygiene**: Ensure site description, Open Graph image, and Person `sameAs` profiles are populated. Verify `sitemap.xml` contains no template/demo pages and every favicon/manifest asset referenced by the generated HTML exists.
 - **Typos & Formatting**: Scan for obvious spelling errors or redundant punctuation (e.g., `, ,`). **DO NOT** fix automatically; report them to the user for confirmation.
 
 ## Core Workflows

@@ -9,6 +9,7 @@ year: 2026
 is_full_paper: true
 is_first_author: true
 is_corresponding_author: false
+selected: true
 authors:
   - name: "Tao Xiao"
   - name: "Dong Wang"
@@ -16,4 +17,3 @@ authors:
   - name: "Hideaki Hata"
   - name: "Yasutaka Kamei"
 ---
-

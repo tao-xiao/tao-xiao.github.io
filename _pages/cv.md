@@ -9,30 +9,22 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
+## Education
+
 {% for edu in site.data.cv.education.en %}
 * {{ edu.degree }}, {{ edu.institution }}, {{ edu.year }}
 {% endfor %}
 
-Work experience
-======
+## Work Experience
+
 {% for exp in site.data.cv.experience.en %}
 * {{ exp.period }}: {{ exp.role }}
   * {{ exp.institution }}
   {% if exp.details %}* {{ exp.details }}{% endif %}
 {% endfor %}
 
-Skills
-======
-* Software Engineering
-* AI4SE
-* Mining Software Repositories
-* Empirical Software Engineering
-* Code Review
+## Publications
 
-Publications
-======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>

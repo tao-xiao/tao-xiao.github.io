@@ -10,12 +10,12 @@ author_profile: true
 <div id="research-toc">
   <strong>Jump to:</strong>
   <ul>
-    <li><a href="#awards">Research Awards & Activities</a></li>
-    <li><a href="#grants">Research Grants & Scholarships</a></li>
+    <li><a href="#academic-service">Academic Service</a></li>
+    <li><a href="#grants-funding">Grants & Funding</a></li>
   </ul>
 </div>
 
-<h2 id="awards">Research Awards & Activities</h2>
+<h2 id="academic-service">Academic Service</h2>
 
 * Program Committee, Automated Software Engineering (ASE), 2026
 * Program Committee, Foundations of Software Engineering (FSE), 2026
@@ -26,9 +26,9 @@ author_profile: true
 * Junior Program Committee, International Working Conference on Mining Software Repositories (MSR): [2023@Research Track](https://conf.researchr.org/track/msr-2023/msr-2023-junior-pc?)
 * Reviewer for Transactions on Software Engineering (TSE), Transactions on Software Engineering and Methodology (TOSEM), Empirical Software Engineering (EMSE or ESE), Journal of Systems and Software (JSS), Journal of Software: Evolution and Process, Science of Computer Programming (SCP)
 
-<h2 id="grants">Research Grants & Scholarships</h2>
+<h2 id="grants-funding">Grants & Funding</h2>
 
-* [Grant-in-Aid for Early-Career Scientists](https://www.kayamorif.or.jp/j.html), Amount: 3,500,000 JPY for 2 years (Apr 2026 - Mar 2028)
+* [JSPS KAKENHI Grant-in-Aid for Early-Career Scientists](https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26K21198/), Project No. 26K21198, Amount: 3,500,000 JPY for 2 years (Apr 2026 - Mar 2028)
 * [Kayamori Foundation of Informational Science Advancement Research Grant 2025](https://www.kayamorif.or.jp/j.html), Amount: 1,000,000 JPY for 2 years (Dec 2025 - Dec 2027)
 * [JSPS Research Fellowship for Young Scientist](https://www.jsps.go.jp/english/e-pd/index.html), Acceptance rate (2023): 158/738 (21.4%), Amount: 7,200,000 JPY for 3 years (Apr 2023 - Mar 2026)
 * [JASSO Honors Scholarship](https://www.jasso.go.jp/en/ryugaku/scholarship_j/shoreihi/about.html), Amount: 288,000 JPY for 6 months (Oct 2020 - Mar 2021)
