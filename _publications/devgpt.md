@@ -1,7 +1,7 @@
 ---
 title: "DevGPT: Studying Developer-ChatGPT Conversations"
 collection: publications
-permalink: /publication/2024-05-01-devgpt
+permalink: /publication/devgpt
 venue: "21st IEEE International Conference on Mining Software Repositories (MSR)"
 track: "Mining Challenge Proposal"
 paperurl: "https://arxiv.org/pdf/2309.03914.pdf"
@@ -16,4 +16,3 @@ authors:
   - name: "Hideaki Hata"
   - name: "Kenichi Matsumoto"
 ---
-

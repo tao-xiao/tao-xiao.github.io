@@ -17,6 +17,7 @@ A list of the pages and publications on this site. An [XML version]({{ base_path
 {% endfor %}
 
 <h2>Publications</h2>
-{% for post in site.publications reversed %}
+{% assign sorted_publications = site.publications | sort: "year" | reverse %}
+{% for post in sorted_publications %}
   {% include archive-single.html %}
 {% endfor %}

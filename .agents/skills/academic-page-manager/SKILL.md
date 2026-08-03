@@ -34,18 +34,19 @@ This skill helps you manage and update your academic website efficiently.
     - Ensure no extra spaces before commas in author lists.
     - Check navigation menu alignment (menu items should stay on one line).
 - **Routing**: Ensure Home page (`/`) and all permalinks do not return 404.
+- **Publication Slugs**: Keep publication filenames and permalinks date-free (for example, `paper-title.md` and `/publication/paper-title`). Sort publication lists explicitly by the `year` front-matter field rather than relying on filename dates.
 - **SEO & Template Hygiene**: Ensure site description, Open Graph image, and Person `sameAs` profiles are populated. Verify `sitemap.xml` contains no template/demo pages and every favicon/manifest asset referenced by the generated HTML exists.
 - **Typos & Formatting**: Scan for obvious spelling errors or redundant punctuation (e.g., `, ,`). **DO NOT** fix automatically; report them to the user for confirmation.
 
 ## Core Workflows
 
 ### 1. Adding a New Publication
-Create a new file in `_publications/` with naming `YYYY-MM-DD-title-slug.md`.
+Create a new file in `_publications/` with the date-free naming `title-slug.md`.
 ```yaml
 ---
 title: "Full Paper Title"
 collection: publications
-permalink: /publication/YYYY-MM-DD-slug
+permalink: /publication/title-slug
 year: YYYY
 venue: "Conference or Journal Name"
 paperurl: "URL to PDF"

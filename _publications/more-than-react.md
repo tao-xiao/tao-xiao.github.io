@@ -1,7 +1,7 @@
 ---
 title: "More Than React: Investigating The Role of Emoji Reaction in GitHub Pull Requests"
 collection: publications
-permalink: /publication/2021-09-01-more-than-react
+permalink: /publication/more-than-react
 venue: "37th International Conference on Software Maintenance and Evolution (ICSME)"
 track: "Registered Report"
 paperurl: "https://www.researchgate.net/publication/353995896_More_Than_React_Investigating_The_Role_of_EmojiReaction_in_GitHub_Pull_Requests"
@@ -18,4 +18,3 @@ authors:
   - name: "Takashi Ishio"
   - name: "Kenichi Matsumoto"
 ---
-

@@ -14,7 +14,7 @@
 # 
 # - `excerpt` and `paper_url` can be blank, but the others must have values. 
 # - `pub_date` must be formatted as YYYY-MM-DD.
-# - `url_slug` will be the descriptive part of the .md file and the permalink URL for the page about the paper. The .md file will be `YYYY-MM-DD-[url_slug].md` and the permalink will be `https://[yourdomain]/publications/YYYY-MM-DD-[url_slug]`
+# - `url_slug` will be the date-free .md filename and permalink URL for the page about the paper. The .md file will be `[url_slug].md` and the permalink will be `https://[yourdomain]/publication/[url_slug]`.
 
 
 # ## Import pandas
@@ -64,8 +64,8 @@ def html_escape(text):
 import os
 for row, item in publications.iterrows():
     
-    md_filename = str(item.pub_date) + "-" + item.url_slug + ".md"
-    html_filename = str(item.pub_date) + "-" + item.url_slug
+    md_filename = item.url_slug + ".md"
+    html_filename = item.url_slug
     year = item.pub_date[:4]
     
     ## YAML variables
@@ -79,7 +79,7 @@ for row, item in publications.iterrows():
     if len(str(item.excerpt)) > 5:
         md += "\nexcerpt: '" + html_escape(item.excerpt) + "'"
     
-    md += "\ndate: " + str(item.pub_date) 
+    md += "\nyear: " + year
     
     md += "\nvenue: '" + html_escape(item.venue) + "'"
     
@@ -104,5 +104,4 @@ for row, item in publications.iterrows():
        
     with open("../_publications/" + md_filename, 'w') as f:
         f.write(md)
-
 

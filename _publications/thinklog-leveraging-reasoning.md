@@ -1,7 +1,7 @@
 ---
 title: "ThinkLog: Leveraging Reasoning for Log Statement Generation"
 collection: publications
-permalink: /publication/2026-06-02-thinklog-leveraging-reasoning
+permalink: /publication/thinklog-leveraging-reasoning
 venue: "The 26th International Conference on Software Quality, Reliability, and Security (QRS)"
 track: "Short Paper"
 paperurl: "https://arxiv.org/pdf/2607.11615"

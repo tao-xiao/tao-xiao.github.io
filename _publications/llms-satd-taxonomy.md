@@ -1,7 +1,7 @@
 ---
 title: "How Far Have LLMs Come Toward Automated SATD Taxonomy Construction?"
 collection: publications
-permalink: /publication/2025-01-01-llms-satd-taxonomy
+permalink: /publication/llms-satd-taxonomy
 venue: "32nd Asia-Pacific Software Engineering Conference"
 track: "Early Research Achievements"
 paperurl: "https://arxiv.org/pdf/2506.09601"

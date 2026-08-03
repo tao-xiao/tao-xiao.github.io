@@ -28,7 +28,8 @@ author_profile: true
 </div>
 
 <div id="publications-list">
-{% for post in site.publications reversed %}
+{% assign sorted_publications = site.publications | sort: "year" | reverse %}
+{% for post in sorted_publications %}
   <div class="publication-item" 
        data-first="{{ post.is_first_author | default: false }}" 
        data-corresponding="{{ post.is_corresponding_author | default: false }}"

@@ -1,7 +1,7 @@
 ---
 title: "AILINKPREVIEWER: Enhancing Code Reviews with LLM-Powered Link Previews"
 collection: publications
-permalink: /publication/2025-01-02-ailinkpreviewer
+permalink: /publication/ailinkpreviewer
 venue: "32nd Asia-Pacific Software Engineering Conference"
 track: "Tool Demonstration"
 paperurl: "https://arxiv.org/pdf/2511.09223"
