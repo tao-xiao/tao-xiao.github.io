@@ -1,5 +1,5 @@
 ---
-title: "A Mutation-Guided Assessment of Acceleration Approaches for Continuous Integration: An Empirical Study of Yourbase"
+title: "A Mutation-Guided Assessment of Acceleration Approaches for Continuous Integration: An Empirical Study of YourBase"
 collection: publications
 permalink: /publication/mutation-guided-ci
 venue: "21st IEEE International Conference on Mining Software Repositories (MSR)"

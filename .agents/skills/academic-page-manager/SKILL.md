@@ -19,6 +19,7 @@ This skill helps you manage and update your academic website efficiently.
 ## Verification Checklist (Lessons Learned)
 - **Ruby & Environment**: Ensure `csv`, `webrick`, etc., are in `Gemfile` for Ruby 3.4+. Maintain the `tainted?` patch for Ruby 3.2+ compatibility.
 - **Data Integrity**: Validate YAML syntax (indentation, colons). Ensure `abstract` is a single line and properly quoted.
+- **Publication Metadata**: Verify exact author order, author-name capitalization, branded title casing, publication year convention, and URLs against the publisher, conference, or current paper record.
 - **Markdown Rendering**: Always leave blank lines around HTML blocks (e.g., `<div>`) to prevent Markdown layout collapse.
 - **UI/UX Consistency**: 
     - Verify high-contrast button colors (Selected: Black, Unselected: White).

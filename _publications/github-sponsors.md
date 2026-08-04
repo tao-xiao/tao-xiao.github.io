@@ -11,7 +11,7 @@ is_full_paper: true
 is_first_author: false
 is_corresponding_author: false
 authors:
-  - name: "Shimada Naomichi"
+  - name: "Naomichi Shimada"
   - name: "Tao Xiao"
   - name: "Hideaki Hata"
   - name: "Christoph Treude"
