@@ -28,7 +28,7 @@ author_profile: true
 </div>
 
 <div id="publications-list">
-{% assign sorted_publications = site.publications | sort: "year" | reverse %}
+{% assign sorted_publications = site.publications | sort: "uploaded_at" | reverse %}
 {% for post in sorted_publications %}
   <div class="publication-item" 
        data-first="{{ post.is_first_author | default: false }}" 

@@ -62,6 +62,7 @@ def html_escape(text):
 # In[5]:
 
 import os
+from datetime import date
 for row, item in publications.iterrows():
     
     md_filename = item.url_slug + ".md"
@@ -80,6 +81,7 @@ for row, item in publications.iterrows():
         md += "\nexcerpt: '" + html_escape(item.excerpt) + "'"
     
     md += "\nyear: " + year
+    md += "\nuploaded_at: \"" + date.today().isoformat() + "\""
     
     md += "\nvenue: '" + html_escape(item.venue) + "'"
     
@@ -104,4 +106,3 @@ for row, item in publications.iterrows():
        
     with open("../_publications/" + md_filename, 'w') as f:
         f.write(md)
-

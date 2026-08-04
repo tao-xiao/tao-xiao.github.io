@@ -5,6 +5,7 @@ permalink: /publication/recovering-pr-revisions-altered-history
 venue: "The 41st IEEE/ACM International Conference on Automated Software Engineering (ASE)"
 paperurl: "https://rebels.cs.uwaterloo.ca/papers/ase2026_sun.pdf"
 year: 2026
+uploaded_at: "2026-08-04"
 is_full_paper: true
 is_first_author: false
 is_corresponding_author: false

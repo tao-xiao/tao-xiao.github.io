@@ -20,7 +20,7 @@ My research focuses on AI-assisted software engineering, particularly how large 
 
 ## Selected Publications
 
-{% assign sorted_publications = site.publications | sort: "year" | reverse %}
+{% assign sorted_publications = site.publications | sort: "uploaded_at" | reverse %}
 {% for post in sorted_publications %}
   {% if post.selected %}
     {% include archive-single.html %}

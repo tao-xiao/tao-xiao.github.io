@@ -4,6 +4,7 @@ collection: publications
 permalink: /publication/llm-taxonomy-evaluation
 venue: "The 41st IEEE/ACM International Conference on Automated Software Engineering (ASE)"
 year: 2026
+uploaded_at: "2026-08-03"
 is_full_paper: true
 is_first_author: false
 is_corresponding_author: true
