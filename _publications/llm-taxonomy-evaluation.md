@@ -8,6 +8,7 @@ uploaded_at: "2026-08-03"
 is_full_paper: true
 is_first_author: false
 is_corresponding_author: true
+selected: true
 authors:
   - name: "Sota Nakashima"
   - name: "Yuta Ishimoto"
