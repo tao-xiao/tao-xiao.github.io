@@ -3,6 +3,7 @@ title: "How Well Do LLMs Generate Taxonomies in the SE Domain? A Multi-perspecti
 collection: publications
 permalink: /publication/llm-taxonomy-evaluation
 venue: "The 41st IEEE/ACM International Conference on Automated Software Engineering (ASE)"
+paperurl: "https://arxiv.org/abs/2608.01592"
 year: 2026
 uploaded_at: "2026-08-03"
 is_full_paper: true
