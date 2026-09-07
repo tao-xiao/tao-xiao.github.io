@@ -3,7 +3,7 @@ title: "On the Effectiveness of Training Data Optimization for LLM-based Code Ge
 collection: publications
 permalink: /publication/training-data-optimization-code-generation
 venue: "ACM Transactions on Software Engineering and Methodology (TOSEM)"
-paperurl: "https://arxiv.org/abs/2512.24570"
+paperurl: "https://dl.acm.org/doi/10.1145/3844732"
 year: 2026
 uploaded_at: "2026-09-06"
 is_full_paper: true
