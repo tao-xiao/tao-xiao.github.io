@@ -17,7 +17,7 @@ author_profile: true
 
 <h2 id="academic-service">Academic Service</h2>
 
-* Program Committee, Automated Software Engineering (ASE), 2026
+* Program Committee, Automated Software Engineering (ASE), 2026 — **Distinguished Reviewer Award** 🏆
 * Program Committee, Foundations of Software Engineering (FSE), 2026
 * Meta-reviewer for tool demonstrations track, Sub-reviewer for main track in Foundations of Software Engineering (FSE), 2025
 * Program Committee, The IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER): [Registered Report Track](https://conf.researchr.org/track/saner-2025/saner-2025-registered-report-track-)
