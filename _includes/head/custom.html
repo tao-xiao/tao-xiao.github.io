@@ -2,7 +2,15 @@
 
 <!-- start custom head snippets -->
 
-<!-- English/Chinese language switch (always starts in English; see masthead.html) -->
+<!-- English/Chinese language switch: apply the visitor's saved choice before first paint (default: English) -->
+<script>
+  (function () {
+    var lang = 'en';
+    try { if (localStorage.getItem('site-lang') === 'zh') { lang = 'zh'; } } catch (e) {}
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+  })();
+</script>
 <style>
   html:not([data-lang="zh"]) .i18n-zh,
   html[data-lang="zh"] .i18n-en { display: none !important; }

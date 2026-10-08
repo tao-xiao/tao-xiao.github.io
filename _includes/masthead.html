@@ -27,5 +27,6 @@
     var lang = document.documentElement.getAttribute('data-lang') === 'zh' ? 'en' : 'zh';
     document.documentElement.setAttribute('data-lang', lang);
     document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+    try { localStorage.setItem('site-lang', lang); } catch (e) {}
   }
 </script>

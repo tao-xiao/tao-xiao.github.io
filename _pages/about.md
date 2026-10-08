@@ -18,7 +18,7 @@ My research focuses on AI-assisted software engineering, particularly how large 
 </div>
 <div class="i18n-zh" lang="zh" markdown="1">
 
-我是日本九州大学助理教授，隶属于 [POSL（软件工程与编程语言原理）实验室](https://posl.ait.kyushu-u.ac.jp/en/)。
+我是日本九州大学助理教授，隶属于 [POSL (Principles of Software Engineering and Programming Languages) Lab](https://posl.ait.kyushu-u.ac.jp/en/)。
 
 我的研究方向是 AI 辅助软件工程，重点关注大语言模型如何支持代码审查、软件仓库分析以及持续集成与交付。
 
