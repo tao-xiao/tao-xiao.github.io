@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "Publications"
+title_zh: "学术论文"
 permalink: /publications/
 author_profile: true
 ---
@@ -8,21 +9,21 @@ author_profile: true
 {% include base_path %}
 
 {% if site.author.googlescholar %}
-  <p>You can also find an up-to-date publication list on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</p>
+  <p><span class="i18n-en" lang="en">{{ site.data.locales.en.scholar_prefix }} <a href="{{ site.author.googlescholar }}">{{ site.data.locales.en.scholar_link }}</a>{{ site.data.locales.en.scholar_suffix }}</span><span class="i18n-zh" lang="zh">{{ site.data.locales.zh.scholar_prefix }} <a href="{{ site.author.googlescholar }}">{{ site.data.locales.zh.scholar_link }}</a> {{ site.data.locales.zh.scholar_suffix }}</span></p>
 {% endif %}
 
 {% include base_path %}
 
 <div class="filters-container">
-  <strong style="display: block; margin-bottom: 10px;">Filter by (multi-select):</strong>
+  <strong style="display: block; margin-bottom: 10px;">{% include i18n.html key="filter_by" %}</strong>
   <div class="button-group">
-    <button id="btn-first" class="btn-modern selected" onclick="toggleFilter('first')">First Author</button>
-    <button id="btn-corresponding" class="btn-modern selected" onclick="toggleFilter('corresponding')">Corresponding Author</button>
-    <button id="btn-full" class="btn-modern selected" onclick="toggleFilter('full')">Full Paper</button>
+    <button id="btn-first" class="btn-modern selected" onclick="toggleFilter('first')">{% include i18n.html key="first_author" %}</button>
+    <button id="btn-corresponding" class="btn-modern selected" onclick="toggleFilter('corresponding')">{% include i18n.html key="corresponding_author" %}</button>
+    <button id="btn-full" class="btn-modern selected" onclick="toggleFilter('full')">{% include i18n.html key="full_paper" %}</button>
   </div>
   <div class="button-group-actions" style="margin-top: 10px;">
-    <button class="btn-action-modern" onclick="resetFilters()">Reset (First/Corresponding & Full)</button>
-    <button class="btn-action-modern" onclick="showAll()">Show All</button>
+    <button class="btn-action-modern" onclick="resetFilters()">{% include i18n.html key="reset" %}</button>
+    <button class="btn-action-modern" onclick="showAll()">{% include i18n.html key="show_all" %}</button>
   </div>
   <p id="publication-count" aria-live="polite" style="margin: 10px 0 0;"></p>
 </div>
@@ -135,7 +136,8 @@ author_profile: true
     }
 
     var count = document.getElementById('publication-count');
-    if (count) count.textContent = 'Showing ' + visibleCount + ' of ' + items.length + ' publications';
+    if (count) count.innerHTML = '<span class="i18n-en" lang="en">Showing ' + visibleCount + ' of ' + items.length + ' publications</span>' +
+      '<span class="i18n-zh" lang="zh">显示 ' + visibleCount + ' / ' + items.length + ' 篇论文</span>';
   }
 
   function updateButtonStyles() {

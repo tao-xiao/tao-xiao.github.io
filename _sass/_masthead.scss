@@ -14,6 +14,8 @@
   &__inner-wrap {
     @include container;
     @include clearfix;
+    display: flex;
+    align-items: center;
     padding: 1em 1em 1em;
     font-family: $sans-serif-narrow;
 
@@ -32,6 +34,8 @@
 }
 
 .masthead__menu {
+  flex: 1 1 auto;
+  min-width: 0;
 
   ul {
     margin: 0;
@@ -49,5 +53,21 @@
   &--lg {
     padding-right: 2em;
     font-weight: 700;
+  }
+}
+/* English/Chinese switch: kept outside the greedy nav so it never collapses into the menu */
+.lang-toggle {
+  flex: 0 0 auto;
+  margin-left: 1rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  color: $masthead-link-color;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover {
+    color: $masthead-link-color-hover;
+    border-color: $masthead-link-color-hover;
   }
 }

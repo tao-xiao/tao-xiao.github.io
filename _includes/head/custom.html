@@ -2,6 +2,12 @@
 
 <!-- start custom head snippets -->
 
+<!-- English/Chinese language switch (always starts in English; see masthead.html) -->
+<style>
+  html:not([data-lang="zh"]) .i18n-zh,
+  html[data-lang="zh"] .i18n-en { display: none !important; }
+</style>
+
 <link rel="apple-touch-icon" href="{{ base_path }}/images/site-logo.png">
 <link rel="icon" type="image/png" href="{{ base_path }}/images/site-logo.png">
 <link rel="manifest" href="{{ base_path }}/images/manifest.json">

@@ -25,6 +25,7 @@ If you see an error like `undefined method 'tainted?' for an instance of String`
 
 - **Education & Experience**: Managed centrally in `_data/cv.yml`. This file feeds both the **About Me** (home) and **CV** pages.
 - **Publications**: Managed as a collection in `_publications/`. Adding a new `.md` file there will automatically update the Publications page and the CV's publication list.
+- **English/Chinese switch**: Every page renders both languages; the masthead button toggles which one is shown (always starts in English, the choice is not remembered). Wrap text in `class="i18n-en"` / `class="i18n-zh"` blocks (use `markdown="1"` on `<div>`s holding Markdown), or use `{% include i18n.html key="..." %}` with strings from `_data/locales.yml`. Page titles use `title_zh` in front matter; nav items use `title_zh` in `_data/navigation.yml`. When editing page content (e.g. `_pages/research.md`), update both languages.
 
 ## Research Page Organization
 

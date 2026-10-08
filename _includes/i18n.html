@@ -1,0 +1,14 @@
+{%- comment -%}
+  Bilingual text for the language switch. Either pass key (looked up in _data/locales.yml)
+  or pass en/zh strings directly:
+    {% include i18n.html key="publications" %}
+    {% include i18n.html en="Publications" zh="学术论文" %}
+{%- endcomment -%}
+{%- if include.key -%}
+  {%- assign i18n_en = site.data.locales.en[include.key] -%}
+  {%- assign i18n_zh = site.data.locales.zh[include.key] -%}
+{%- else -%}
+  {%- assign i18n_en = include.en -%}
+  {%- assign i18n_zh = include.zh | default: include.en -%}
+{%- endif -%}
+<span class="i18n-en" lang="en">{{ i18n_en }}</span><span class="i18n-zh" lang="zh">{{ i18n_zh }}</span>

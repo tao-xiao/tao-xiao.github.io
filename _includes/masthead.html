@@ -13,11 +13,19 @@
               {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{% include i18n.html en=link.title zh=link.title_zh %}</a></li>
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
+    <a class="lang-toggle" href="#" role="button" onclick="toggleSiteLang(); return false;" title="Switch language / 切换语言"><span class="i18n-en" lang="zh">中文</span><span class="i18n-zh" lang="en">English</span></a>
   </div>
 </div>
+<script>
+  function toggleSiteLang() {
+    var lang = document.documentElement.getAttribute('data-lang') === 'zh' ? 'en' : 'zh';
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+  }
+</script>

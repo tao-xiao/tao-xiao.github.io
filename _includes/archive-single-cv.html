@@ -24,7 +24,7 @@
     </h3>
     
     <p style="margin: 0; font-size: 0.9em;">
-      Published in <i>{{ post.venue }}</i>, {{ post.year | default: "2026" }}
+      {% include i18n.html key="published_in" %} <i>{{ post.venue }}</i>, {{ post.year | default: "2026" }}
       {% unless post.is_full_paper %}
         ({{ post.track | default: "Short Paper" }})
       {% endunless %}

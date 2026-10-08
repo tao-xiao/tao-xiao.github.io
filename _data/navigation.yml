@@ -1,9 +1,11 @@
 # main links links
 main:
   - title: "Research Experience"
+    title_zh: "研究经历"
     url: /research/
     
   - title: "Publications"
+    title_zh: "学术论文"
     url: /publications/
 
 #  - title: "Talks"
@@ -13,4 +15,5 @@ main:
 #    url: /teaching/    
     
   - title: "CV"
+    title_zh: "个人简历"
     url: /cv/
