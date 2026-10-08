@@ -38,7 +38,7 @@ author_profile: true
 * 程序委员会委员，IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)：[Registered Report Track](https://conf.researchr.org/track/saner-2025/saner-2025-registered-report-track-)
 * [MSR 2025 Tutorial](https://2025.msrconf.org/details/msr-2025-tutorials/2/Harmonized-Coding-with-AI-LLMs-for-Qualitative-Analysis-in-Software-Engineering-Rese)：Harmonized Coding with AI: LLMs for Qualitative Analysis in Software Engineering Research
 * Mining Challenge 程序委员会联合主席，International Working Conference on Mining Software Repositories (MSR)：[2024@Mining Challenge](https://2024.msrconf.org/track/msr-2024-mining-challenge) [证书](http://tao-xiao.github.io/files/MSR24.pdf)
-* Junior Program Committee 委员，International Working Conference on Mining Software Repositories (MSR)：[2023@Research Track](https://conf.researchr.org/track/msr-2023/msr-2023-junior-pc?)
+* 初级程序委员会委员，International Working Conference on Mining Software Repositories (MSR)：[2023@Research Track](https://conf.researchr.org/track/msr-2023/msr-2023-junior-pc?)
 * 期刊审稿人：Transactions on Software Engineering (TSE)、Transactions on Software Engineering and Methodology (TOSEM)、Empirical Software Engineering (EMSE/ESE)、Journal of Systems and Software (JSS)、Journal of Software: Evolution and Process、Science of Computer Programming (SCP)
 
 </div>
