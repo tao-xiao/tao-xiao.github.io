@@ -47,15 +47,15 @@ author_profile: true
 
 <div class="i18n-en" lang="en" markdown="1">
 
-* [JSPS KAKENHI Grant-in-Aid for Early-Career Scientists](https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26K21198/), Project No. 26K21198, Total: 4,550,000 JPY (Direct: 3,500,000 JPY) for 2 years (Apr 2026 - Mar 2028)
-* [Kayamori Foundation of Informational Science Advancement Research Grant 2025](https://www.kayamorif.or.jp/j.html), Total: 1,000,000 JPY (Direct: 950,000 JPY) for 2 years (Dec 2025 - Dec 2027)
-* [JSPS Research Fellowship for Young Scientist](https://www.jsps.go.jp/english/e-pd/index.html), [Grant-in-Aid for JSPS Fellows](https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23KJ1589/), Project No. 23KJ1589, Total: 2,700,000 JPY (all direct) for 3 years (Apr 2023 - Mar 2026)
+* [JSPS KAKENHI Grant-in-Aid for Early-Career Scientists](https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26K21198/), Project No. 26K21198, Total: 4,550,000 JPY for 2 years (Apr 2026 - Mar 2028)
+* [Kayamori Foundation of Informational Science Advancement Research Grant 2025](https://www.kayamorif.or.jp/j.html), Total: 1,000,000 JPY for 2 years (Dec 2025 - Dec 2027)
+* [JSPS Research Fellowship for Young Scientist](https://www.jsps.go.jp/english/e-pd/index.html), [Grant-in-Aid for JSPS Fellows](https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23KJ1589/), Project No. 23KJ1589, Total: 2,700,000 JPY for 3 years (Apr 2023 - Mar 2026)
 
 </div>
 <div class="i18n-zh" lang="zh" markdown="1">
 
-* [若手研究](https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26K21198/)，日本国家青年科学基金，课题号 26K21198，主持，455万日元（直接350万），2026/04–2028/03
-* [第30届研究资助计划](https://www.kayamorif.or.jp/j.html)，柏森信息科学振兴财团，主持，100万日元（直接95万），2025/12–2027/12
+* [若手研究](https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26K21198/)，日本国家青年科学基金，课题号 26K21198，主持，455万日元，2026/04–2028/03
+* [第30届研究资助计划](https://www.kayamorif.or.jp/j.html)，柏森信息科学振兴财团，主持，100万日元，2025/12–2027/12
 * [特别研究员奖励费](https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23KJ1589/)，JSPS特别研究员科研基金，课题号 23KJ1589，主持，270万日元，2023/04–2026/03
 
 </div>
