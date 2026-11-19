@@ -34,6 +34,7 @@ This skill helps you manage and update your academic website efficiently.
     - **PDF Placeholders**: If `paperurl` is missing, display `[pdf (placeholder)]` linked to `#`.
     - Ensure no extra spaces before commas in author lists.
     - Check navigation menu alignment (menu items should stay on one line).
+- **Profile Images**: After replacing a photo, keep the filename (including case and extension) consistent with `author.avatar` and `og_image` in `_config.yml`; verify the extension matches the actual image format and the generated image loads on the homepage and Publications page.
 - **Routing**: Ensure Home page (`/`) and all permalinks do not return 404.
 - **Publication Slugs & Ordering**: Keep publication filenames and permalinks date-free (for example, `paper-title.md` and `/publication/paper-title`). Sort publication lists by the internal `uploaded_at` front-matter field in descending order. Never render `uploaded_at` in the visible publication UI.
 - **SEO & Template Hygiene**: Ensure site description, Open Graph image, and Person `sameAs` profiles are populated. Verify `sitemap.xml` contains no template/demo pages and every favicon/manifest asset referenced by the generated HTML exists.
